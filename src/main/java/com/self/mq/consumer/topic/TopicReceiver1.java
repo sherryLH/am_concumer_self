@@ -18,13 +18,13 @@ import com.self.mq.consumer.queue.ReplyTo;
 @Component
 public class TopicReceiver1 implements MessageListener{
 
-	@Autowired
-	private ReplyTo replyTo;
+	/*@Autowired
+	private ReplyTo replyTo;*/
 	public void onMessage(Message arg0) {
 		try{
 			String textMsg = ((TextMessage)arg0).getText();
 			System.out.println("【topic监听器1】监听到生产者消息:"+textMsg);
-			replyTo.send(textMsg, arg0);
+//			replyTo.send(textMsg, arg0);
 		}catch(JMSException e){
 			e.printStackTrace();
 		}

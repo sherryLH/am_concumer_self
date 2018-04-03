@@ -106,7 +106,7 @@
     </dependency>
   </dependencies>
   <build>
-  	<finalName>am_producer_self2</finalName>
+  	<finalName>am_concumer_self</finalName>
   	<resources>
   		<resource>
   			<directory>${basedir}/src/main/java</directory>
